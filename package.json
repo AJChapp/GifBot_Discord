@@ -1,0 +1,16 @@
+{
+  "name": "gifbot",
+  "version": "1.0.0",
+  "description": "Easily post gifs and large emojis in disc",
+  "main": "GifBot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "dotenv": "^6.0.0",
+    "request": "^2.88.0"
+  }
+}
