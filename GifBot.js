@@ -27,7 +27,10 @@ client.on('message', msg => {
         request(queryURL, function (err, response, body) {
             if (err) throw err
             const results = JSON.parse(body)
-            const gifURL = results.data[0].images.fixed_height.url
+            // const randomNum = Math.floor(Math.random()*10)
+            const randomNum = 0
+        
+            const gifURL = results.data[randomNum].images.fixed_height.url
             msg.channel.send(gifURL)
                 .catch(console.error);
         });
@@ -53,10 +56,10 @@ client.on('message', msg => {
             case msg.content.includes('{'): {
             }
 
-            case "cactus": {
-                return sendPic('cactus.jpg')
+            // case "cactus": {
+            //     return sendPic('cactus.jpg')
 
-            }
+            // }
 
             case "pout": {
                 return sendPic('astolfoPout.gif')
@@ -68,18 +71,3 @@ client.on('message', msg => {
         }
     }
 });
-
-
-// var search = ''
-//     if (process.argv.length > 4) {
-//         for (i = 3; i < process.argv.length; i++) {
-//             if (i == process.argv.length - 1) {
-//                 search += process.argv[i]
-
-//             }
-//             else {
-
-//                 search += process.argv[i] + ' '
-//             }
-//         }
-//     }
